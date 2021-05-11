@@ -1,0 +1,17 @@
+1.查询某个数据库下某个表的表结构
+SELECT
+  COLUMN_NAME 列名,
+  COLUMN_TYPE 数据类型,
+    DATA_TYPE 字段类型,
+  CHARACTER_MAXIMUM_LENGTH 长度,
+  IS_NULLABLE 是否为空,
+  COLUMN_DEFAULT 默认值,
+  COLUMN_COMMENT 备注 
+FROM
+ INFORMATION_SCHEMA.COLUMNS
+where
+-- eviapp为数据库名称，根据需要改成自己的数据库名
+table_schema ='eviapp'
+AND
+-- tab_eviapp_srvorder_pre_order为表名，根据需要改成自己的表名
+table_name  = 'tab_eviapp_srvorder_pre_order'
